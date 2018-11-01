@@ -1,0 +1,51 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="jumbotron-fluid">
+        <h3 class="display-6">Registration</h3>
+        <p class="lead">Create your Account</p>
+        <hr class="my-2">
+        <form [formGroup]="registerform" (ngSubmit)="OnSubmit()">
+          <div class="row">
+            <div class="col md-6">
+              <div class="form-group">
+                <label for="firstname" class="control-label">First Name*</label>
+                <input type="text" formControlName="firstname" name="firstname" class="form-control">
+              </div>
+            </div>
+            <div class="col md-6">
+              <div class="form-group">
+                <label for="lastname" class="control-label">Last Name*</label>
+                <input type="text" formControlName="lastname" name="lastname" class="form-control">
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email" class="control-label">Email Address*</label>
+            <input type="email" formControlName="email" name="email" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="mobile" class="control-label">Mobile*</label>
+            <input type="mobile" formControlName="mobile" name="mobile" class="form-control">
+          </div>
+          <div class="row">
+            <div class="col md-6">
+              <div class="form-group">
+                <label for="password" class="control-label">Password*</label>
+                <input type="password" formControlName="password" name="password" class="form-control">
+              </div>
+            </div>
+            <div class="col md-6">
+              <div class="form-group">
+                <label for="confirmpassword" class="control-label">Confirm Password*</label>
+                <input type="password" formControlName="confirmpassword" name="confirmpassword" class="form-control">
+              </div>
+            </div>
+          </div>
+          <input type="submit" [disabled]="!registerform.valid" value="Register" class="btn btn-primary">
+          <a class="btn btn-link" routerLink="/login">Existing User? login</a>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

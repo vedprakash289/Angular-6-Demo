@@ -1,0 +1,1920 @@
+﻿{
+  "Definitions": [
+    {
+      "FormDefinition": [
+        {
+          "defaultForm": true,
+          "defaultListing": false,
+          "FormName": "PMMDISPATCHACTIVITYHEADER",
+          "FormDisplayName": "REPORT INFO",
+          "Definition": {
+            "Sections": [
+              {
+                "id": "frmDispatchActivityheader",
+                "label": "Report Info",
+                "sectionIndex": 1,
+                "expandable": false,
+                "defaultExpanded": false,
+                "columns": 1,
+                "rows": 7,
+                "fields": [
+                  {
+                    "colIndex": 1,
+                    "rowIndex": 1,
+                    "type": "text",
+                    "subType": "text",
+                    "id": "activityheader_ctrlreportno",
+                    "label": "Report Number",
+                    "events": [
+                      {
+                        "key": "onblur",
+                        "value": {
+                          "action": "Validate",
+                          "params": {
+                            "data": {
+                              "BusinessValidation": ["fnDuplicateReport"],
+                              "Dependent": [],
+                              "ComputionalExpression": []
+                            }
+                          }
+                        }
+                      }
+                    ],
+                    "attributes": [
+                      {
+                        "key": "defaultvalue",
+                        "value": ""
+                      },
+                      {
+                        "key": "entityName",
+                        "value": "DRDispatchReceiptRegister"
+                      },
+                      {
+                        "key": "entityColName",
+                        "value": "MRVNumber"
+                      },
+                      {
+                        "key": "placeholder",
+                        "value": ""
+                      },
+                      {
+                        "key": "nodehierarchy",
+                        "value": "DRDispatchReceiptRegister"
+                      },
+                      {
+                        "key": "required",
+                        "value": true
+                      },
+                      {
+                        "key": "maxlength",
+                        "value": "50"
+                      },
+                      {
+                        "key": "RegExp",
+                        "value": "^[a-zA-Z_\\-0-9]+$"
+                      }
+                    ]
+                  },
+                  {
+                    "colIndex": 1,
+                    "rowIndex": 1,
+                    "type": "text",
+                    "subType": "text",
+                    "id": "activityheader_ctrlactivityid",
+                    "label": "Activity Id",
+                    "events": [],
+                    "attributes": [
+                      {
+                        "key": "defaultvalue",
+                        "value": "##ActivityId"
+                      },
+                      {
+                        "key": "entityName",
+                        "value": "DRDispatchReceiptRegister"
+                      },
+                      {
+                        "key": "entityColName",
+                        "value": "ActivityId"
+                      },
+                      {
+                        "key": "placeholder",
+                        "value": ""
+                      },
+                      {
+                        "key": "nodehierarchy",
+                        "value": "DRDispatchReceiptRegister"
+                      },
+                      {
+                        "key": "hidden",
+                        "value": true
+                      }
+                    ]
+                  },
+                  {
+                    "colIndex": 1,
+                    "rowIndex": 1,
+                    "type": "text",
+                    "subType": "text",
+                    "id": "activityheader_ctrlprojectid",
+                    "label": "Project Id",
+                    "events": [],
+                    "attributes": [
+                      {
+                        "key": "defaultvalue",
+                        "value": "##ProjectId"
+                      },
+                      {
+                        "key": "entityName",
+                        "value": "DRDispatchReceiptRegister"
+                      },
+                      {
+                        "key": "entityColName",
+                        "value": "ProjectId"
+                      },
+                      {
+                        "key": "placeholder",
+                        "value": ""
+                      },
+                      {
+                        "key": "nodehierarchy",
+                        "value": "DRDispatchReceiptRegister"
+                      },
+                      {
+                        "key": "hidden",
+                        "value": true
+                      }
+                    ]
+                  },
+                  {
+                    "colIndex": 1,
+                    "rowIndex": 1,
+                    "type": "text",
+                    "subType": "text",
+                    "id": "activityheader_ctrluserid",
+                    "label": "CreatedBy",
+                    "events": [],
+                    "attributes": [
+                      {
+                        "key": "defaultvalue",
+                        "value": "##UserId"
+                      },
+                      {
+                        "key": "entityName",
+                        "value": "DRDispatchReceiptRegister"
+                      },
+                      {
+                        "key": "entityColName",
+                        "value": "CreatedBy"
+                      },
+                      {
+                        "key": "placeholder",
+                        "value": ""
+                      },
+                      {
+                        "key": "nodehierarchy",
+                        "value": "DRDispatchReceiptRegister"
+                      },
+                      {
+                        "key": "hidden",
+                        "value": true
+                      }
+                    ]
+                  },
+                  {
+                    "colIndex": 1,
+                    "rowIndex": 1,
+                    "type": "text",
+                    "subType": "text",
+                    "id": "activityheader_ctrlUpdatedByid",
+                    "label": "UpdatedBy",
+                    "events": [],
+                    "attributes": [
+                      {
+                        "key": "defaultvalue",
+                        "value": "##UserId"
+                      },
+                      {
+                        "key": "entityName",
+                        "value": "DRDispatchReceiptRegister"
+                      },
+                      {
+                        "key": "entityColName",
+                        "value": "UpdatedBy"
+                      },
+                      {
+                        "key": "placeholder",
+                        "value": ""
+                      },
+                      {
+                        "key": "nodehierarchy",
+                        "value": "DRDispatchReceiptRegister"
+                      },
+                      {
+                        "key": "hidden",
+                        "value": true
+                      }
+                    ]
+                  },
+                  {
+                    "colIndex": 1,
+                    "rowIndex": 1,
+                    "type": "text",
+                    "subType": "text",
+                    "id": "activityheader_ctrlcreateddt",
+                    "label": "Created Date",
+                    "events": [],
+                    "attributes": [
+                      {
+                        "key": "defaultvalue",
+                        "value": "##CurrentDate()"
+                      },
+                      {
+                        "key": "entityName",
+                        "value": "DRDispatchReceiptRegister"
+                      },
+                      {
+                        "key": "entityColName",
+                        "value": "CreatedDt"
+                      },
+                      {
+                        "key": "placeholder",
+                        "value": ""
+                      },
+                      {
+                        "key": "nodehierarchy",
+                        "value": "DRDispatchReceiptRegister"
+                      },
+                      {
+                        "key": "hidden",
+                        "value": true
+                      }
+                    ]
+                  },
+                  {
+                    "colIndex": 1,
+                    "rowIndex": 1,
+                    "type": "text",
+                    "subType": "text",
+                    "id": "activityheader_ctrlupdateddt",
+                    "label": "Updated Date",
+                    "events": [],
+                    "attributes": [
+                      {
+                        "key": "defaultvalue",
+                        "value": "##CurrentDate()"
+                      },
+                      {
+                        "key": "entityName",
+                        "value": "DRDispatchReceiptRegister"
+                      },
+                      {
+                        "key": "entityColName",
+                        "value": "UpdatedDt"
+                      },
+                      {
+                        "key": "placeholder",
+                        "value": ""
+                      },
+                      {
+                        "key": "nodehierarchy",
+                        "value": "DRDispatchReceiptRegister"
+                      },
+                      {
+                        "key": "hidden",
+                        "value": true
+                      }
+                    ]
+                  },
+                  {
+                    "colIndex": 1,
+                    "rowIndex": 2,
+                    "type": "text",
+                    "subType": "date",
+                    "id": "activityheader_ctrlDisptachedDate",
+                    "label": "Report Date",
+                    "events": [],
+                    "attributes": [
+                      {
+                        "key": "defaultvalue",
+                        "value": ""
+                      },
+                      {
+                        "key": "entityName",
+                        "value": "DRDispatchReceiptRegister"
+                      },
+                      {
+                        "key": "entityColName",
+                        "value": "DisptachedDate"
+                      },
+                      {
+                        "key": "placeholder",
+                        "value": ""
+                      },
+                      {
+                        "key": "nodehierarchy",
+                        "value": "DRDispatchReceiptRegister"
+                      },
+                      {
+                        "key": "required",
+                        "value": true
+                      },
+                      {
+                        "key": "minDate",
+                        "value": "##StartDate"
+                      }
+                    ]
+                  },
+                  {
+                    "colIndex": 1,
+                    "rowIndex": 3,
+                    "type": "select",
+                    "subType": "select",
+                    "id": "activityheader_ctrlLocationFrom",
+                    "label": "Location From",
+                    "events": [],
+                    "attributes": [
+                      {
+                        "key": "defaultvalue",
+                        "value": ""
+                      },
+                      {
+                        "key": "dataSouceType",
+                        "value": "MODEL"
+                      },
+                      {
+                        "key": "dataSource",
+                        "value": "ListOfValue"
+                      },
+                      {
+                        "key": "options",
+                        "value": ""
+                      },
+                      {
+                        "key": "required",
+                        "value": true
+                      },
+                      {
+                        "key": "displayAttributeName",
+                        "value": "ListDomainValue"
+                      },
+                      {
+                        "key": "valueAttributeName",
+                        "value": "ListDomainID"
+                      },
+                      {
+                        "key": "dataSourceFilter",
+                        "value": [
+                          {
+                            "key": "DomainCatalogAbbreviation",
+                            "value": "LOCATION"
+                          }
+                        ]
+                      },
+                      {
+                        "key": "entityName",
+                        "value": "DRDispatchReceiptRegister"
+                      },
+                      {
+                        "key": "entityColName",
+                        "value": "LocationFromId"
+                      },
+                      {
+                        "key": "placeholder",
+                        "value": ""
+                      },
+                      {
+                        "key": "nodehierarchy",
+                        "value": "DRDispatchReceiptRegister"
+                      }
+                    ]
+                  },
+                  {
+                    "colIndex": 1,
+                    "rowIndex": 4,
+                    "type": "select",
+                    "subType": "select",
+                    "id": "activityheader_ctrlLocationTo",
+                    "label": "Location To",
+                    "events": [],
+                    "attributes": [
+                      {
+                        "key": "defaultvalue",
+                        "value": ""
+                      },
+                      {
+                        "key": "dataSouceType",
+                        "value": "MODEL"
+                      },
+                      {
+                        "key": "dataSource",
+                        "value": "ListOfValue"
+                      },
+                      {
+                        "key": "options",
+                        "value": ""
+                      },
+                      {
+                        "key": "required",
+                        "value": true
+                      },
+                      {
+                        "key": "displayAttributeName",
+                        "value": "ListDomainValue"
+                      },
+                      {
+                        "key": "valueAttributeName",
+                        "value": "ListDomainID"
+                      },
+                      {
+                        "key": "dataSourceFilter",
+                        "value": [
+                          {
+                            "key": "DomainCatalogAbbreviation",
+                            "value": "LOCATION"
+                          }
+                        ]
+                      },
+                      {
+                        "key": "entityName",
+                        "value": "DRDispatchReceiptRegister"
+                      },
+                      {
+                        "key": "entityColName",
+                        "value": "LocationToId"
+                      },
+                      {
+                        "key": "placeholder",
+                        "value": ""
+                      },
+                      {
+                        "key": "nodehierarchy",
+                        "value": "DRDispatchReceiptRegister"
+                      }
+                    ]
+                  },
+                  {
+                    "colIndex": 1,
+                    "rowIndex": 5,
+                    "type": "select",
+                    "subType": "select",
+                    "id": "activityheader_ctrlInspectorName",
+                    "label": "Inspector",
+                    "events": [],
+                    "attributes": [
+                      {
+                        "key": "defaultvalue",
+                        "value": ""
+                      },
+                      {
+                        "key": "dataSouceType",
+                        "value": "MODEL"
+                      },
+                      {
+                        "key": "dataSource",
+                        "value": "ListOfValue"
+                      },
+                      {
+                        "key": "options",
+                        "value": ""
+                      },
+                      {
+                        "key": "required",
+                        "value": true
+                      },
+                      {
+                        "key": "displayAttributeName",
+                        "value": "ListDomainValue"
+                      },
+                      {
+                        "key": "valueAttributeName",
+                        "value": "ListDomainID"
+                      },
+                      {
+                        "key": "dataSourceFilter",
+                        "value": [
+                          {
+                            "key": "DomainCatalogAbbreviation",
+                            "value": "INSPECTOR"
+                          }
+                        ]
+                      },
+                      {
+                        "key": "entityName",
+                        "value": "DRDispatchReceiptRegister"
+                      },
+                      {
+                        "key": "entityColName",
+                        "value": "DispatchedById"
+                      },
+                      {
+                        "key": "placeholder",
+                        "value": ""
+                      },
+                      {
+                        "key": "nodehierarchy",
+                        "value": "DRDispatchReceiptRegister"
+                      }
+                    ]
+                  },
+                  {
+                    "colIndex": 1,
+                    "rowIndex": 6,
+                    "type": "text",
+                    "subType": "textarea",
+                    "id": "activityheader_ctrlremarks",
+                    "label": "REMARKS",
+                    "events": [],
+                    "attributes": [
+                      {
+                        "key": "defaultvalue",
+                        "value": ""
+                      },
+                      {
+                        "key": "entityName",
+                        "value": "DRDispatchReceiptRegister"
+                      },
+                      {
+                        "key": "entityColName",
+                        "value": "Remarks"
+                      },
+                      {
+                        "key": "placeholder",
+                        "value": ""
+                      },
+                      {
+                        "key": "nodehierarchy",
+                        "value": "DRDispatchReceiptRegister"
+                      },
+                      {
+                        "key": "maxlength",
+                        "value": "255"
+                      },
+                      {
+                        "key": "RegExp",
+                        "value": "^[a-zA-Z-_\\0-9:,.@#()! ]+$"
+                      }
+                    ]
+                  },
+                  {
+                    "colIndex": 1,
+                    "rowIndex": 7,
+                    "type": "button",
+                    "subType": "labelButton",
+                    "id": "activityheader_ctrlbtnComplete",
+                    "label": "COMPLETE",
+                    "events": [
+                      {
+                        "key": "onclick",
+                        "value": {
+                          "action": "LoadNativeForm",
+                          "params": {
+                            "FormName": "SUMMARY",
+                            "ReadyToSync": true,
+                            "data": {
+                              "dataSource": "",
+                              "SearchAttributes": [],
+                              "NavigatingToForm": "SUMMARY",
+                              "NavigatingToSection": "",
+                              "DisplayResultAttributes": [],
+                              "placeholderKey": ""
+                            }
+                          }
+                        }
+                      }
+                    ],
+                    "attributes": [
+                      {
+                        "key": "classType",
+                        "value": "accept"
+                      },
+                      {
+                        "key": "BusinessValidation",
+                        "value": ["fnDuplicateReport"]
+                      },
+                      {
+                        "key": "NotEqualToValidation",
+                        "value": [
+                          {
+                            "control1": "activityheader_ctrlLocationFrom",
+                            "control2": "activityheader_ctrlLocationTo",
+                            "message": "Location from and Location to can not be same.",
+                            "message1": "Location from and Location to can not be same."
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "defaultForm": false,
+          "defaultListing": false,
+          "FormName": "PMMDISPATCH",
+          "FormDisplayName": "DISPATCH",
+          "NavigationActionBar": [
+            {
+              "type": "Badge",
+              "action": "LoadForm",
+              "params": {
+                "FormName": "DispatchItemListing",
+                "data": null
+              }
+            }
+          ],
+          "Definition": {
+            "Sections": [
+              {
+                "id": "PMMDISPATCH_PIPEDETAILS",
+                "label": "PIPE DETAILS",
+                "sectionIndex": 1,
+                "expandable": false,
+                "defaultExpanded": false,
+                "columns": 1,
+                "rows": 6,
+                "fields": [
+                  {
+                    "colIndex": 1,
+                    "rowIndex": 1,
+                    "columns": 2,
+                    "rows": 3,
+                    "type": "group",
+                    "subType": "group",
+                    "id": "pipe_ctrlgrouppipeId",
+                    "label": "PipeNo",
+                    "events": [],
+                    "attributes": [
+                      {
+                        "key": "defaultvalue",
+                        "value": ""
+                      },
+                      {
+                        "key": "classType",
+                        "value": "informationScreen"
+                      },
+                      {
+                        "key": "placeholder",
+                        "value": ""
+                      },
+                      {
+                        "key": "dataSource",
+                        "value": "items"
+                      },
+                      {
+                        "key": "nodehierarchy",
+                        "value": "DRDispatchReceiptRegister.DRDispatchReceiptDetails"
+                      },
+                      {
+                        "key": "entityColName",
+                        "value": "PipeCoilId"
+                      },
+                      {
+                        "key": "valueAttributeName",
+                        "value": "PipeId"
+                      }
+                    ],
+                    "fields": [
+                      {
+                        "colIndex": 1,
+                        "rowIndex": 1,
+                        "type": "text",
+                        "subType": "text",
+                        "id": "pipe_ctrlpipeId",
+                        "label": "PipeId",
+                        "events": [],
+                        "attributes": [
+                          {
+                            "key": "defaultvalue",
+                            "value": ""
+                          },
+                          {
+                            "key": "entityName",
+                            "value": "DRPipeClassAudits"
+                          },
+                          {
+                            "key": "entityColName",
+                            "value": "PipeFromId"
+                          },
+                          {
+                            "key": "valueAttributeName",
+                            "value": "PipeId"
+                          },
+                          {
+                            "key": "hidden",
+                            "value": true
+                          },
+                          {
+                            "key": "placeholder",
+                            "value": ""
+                          },
+                          {
+                            "key": "nodehierarchy",
+                            "value": "DRDispatchReceiptRegister.DRDispatchReceiptDetails.DRPipeClassAudits"
+                          }
+                        ]
+                      },
+                      {
+                        "colIndex": 1,
+                        "rowIndex": 1,
+                        "type": "text",
+                        "subType": "text",
+                        "id": "pipe_ctrlpipeIdDR",
+                        "label": "PipeId",
+                        "events": [],
+                        "attributes": [
+                          {
+                            "key": "defaultvalue",
+                            "value": ""
+                          },
+                          {
+                            "key": "entityName",
+                            "value": "DRDispatchReceiptDetails"
+                          },
+                          {
+                            "key": "entityColName",
+                            "value": "PipeCoilId"
+                          },
+                          {
+                            "key": "valueAttributeName",
+                            "value": "PipeId"
+                          },
+                          {
+                            "key": "hidden",
+                            "value": true
+                          },
+                          {
+                            "key": "placeholder",
+                            "value": ""
+                          },
+                          {
+                            "key": "nodehierarchy",
+                            "value": "DRDispatchReceiptRegister.DRDispatchReceiptDetails"
+                          }
+                        ]
+                      },
+                      {
+                        "colIndex": 1,
+                        "rowIndex": 1,
+                        "type": "label",
+                        "subType": "label",
+                        "id": "pipe_ctrlPipeNo",
+                        "label": "ITEM NO.",
+                        "events": [],
+                        "attributes": [
+                          {
+                            "key": "defaultvalue",
+                            "value": ""
+                          },
+                          {
+                            "key": "valueAttributeName",
+                            "value": "PipeNo"
+                          },
+                          {
+                            "key": "placeholder",
+                            "value": ""
+                          }
+                        ]
+                      },
+                      {
+                        "colIndex": 2,
+                        "rowIndex": 1,
+                        "type": "label",
+                        "subType": "label",
+                        "id": "pipe_ctrlHeatNo",
+                        "label": "Heat No",
+                        "events": [],
+                        "attributes": [
+                          {
+                            "key": "defaultvalue",
+                            "value": ""
+                          },
+                          {
+                            "key": "valueAttributeName",
+                            "value": "HeatNo"
+                          },
+                          {
+                            "key": "placeholder",
+                            "value": ""
+                          }
+                        ]
+                      },
+                      {
+                        "colIndex": 1,
+                        "rowIndex": 2,
+                        "type": "label",
+                        "subType": "label",
+                        "id": "pipe_ctrlLength",
+                        "label": "Length (M)",
+                        "events": [],
+                        "attributes": [
+                          {
+                            "key": "defaultvalue",
+                            "value": 0
+                          },
+                          {
+                            "key": "valueAttributeName",
+                            "value": "Length"
+                          },
+                          {
+                            "key": "entityName",
+                            "value": "DRPipeClassAudits"
+                          },
+                          {
+                            "key": "entityColName",
+                            "value": "FromLength"
+                          },
+                          {
+                            "key": "placeholder",
+                            "value": ""
+                          },
+                          {
+                            "key": "nodehierarchy",
+                            "value": "DRDispatchReceiptRegister.DRDispatchReceiptDetails.DRPipeClassAudits"
+                          }
+                        ]
+                      },
+                      {
+                        "colIndex": 1,
+                        "rowIndex": 2,
+                        "type": "text",
+                        "subType": "text",
+                        "id": "pipe_ctrlLengthDR",
+                        "label": "Length (M)",
+                        "events": [],
+                        "attributes": [
+                          {
+                            "key": "defaultvalue",
+                            "value": 0
+                          },
+                          {
+                            "key": "valueAttributeName",
+                            "value": "Length"
+                          },
+                          {
+                            "key": "entityName",
+                            "value": "DRDispatchReceiptDetails"
+                          },
+                          {
+                            "key": "entityColName",
+                            "value": "LengthReceived"
+                          },
+                          {
+                            "key": "placeholder",
+                            "value": ""
+                          },
+                          {
+                            "key": "nodehierarchy",
+                            "value": "DRDispatchReceiptRegister.DRDispatchReceiptDetails"
+                          },
+                          {
+                            "key": "hidden",
+                            "value": true
+                          }
+                        ]
+                      },
+                      {
+                        "colIndex": 2,
+                        "rowIndex": 2,
+                        "type": "label",
+                        "subType": "label",
+                        "id": "pipe_ctrldia",
+                        "label": "DIA (IN)",
+                        "events": [],
+                        "attributes": [
+                          {
+                            "key": "defaultvalue",
+                            "value": ""
+                          },
+                          {
+                            "key": "valueAttributeName",
+                            "value": "Diameter"
+                          },
+                          {
+                            "key": "placeholder",
+                            "value": ""
+                          }
+                        ]
+                      },
+                      {
+                        "colIndex": 1,
+                        "rowIndex": 3,
+                        "type": "label",
+                        "subType": "label",
+                        "id": "pipe_ctrlWallThickness",
+                        "label": "WT (IN)",
+                        "events": [],
+                        "attributes": [
+                          {
+                            "key": "defaultvalue",
+                            "value": ""
+                          },
+                          {
+                            "key": "valueAttributeName",
+                            "value": "WallThickness"
+                          },
+                          {
+                            "key": "placeholder",
+                            "value": ""
+                          }
+                        ]
+                      },
+                      {
+                        "colIndex": 2,
+                        "rowIndex": 3,
+                        "type": "label",
+                        "subType": "label",
+                        "id": "pipe_ctrlItemCategory",
+                        "label": "CATEGORY",
+                        "events": [],
+                        "attributes": [
+                          {
+                            "key": "defaultvalue",
+                            "value": ""
+                          },
+                          {
+                            "key": "valueAttributeName",
+                            "value": "ItemCategory"
+                          },
+                          {
+                            "key": "placeholder",
+                            "value": ""
+                          }
+                        ]
+                      },
+                      {
+                        "colIndex": 1,
+                        "rowIndex": 1,
+                        "type": "text",
+                        "subType": "number",
+                        "id": "DRDispatchReceiptDetails_ctrlSerialNo",
+                        "label": "SerialNo",
+                        "events": [],
+                        "attributes": [
+                          {
+                            "key": "defaultvalue",
+                            "value": "##AdSerialNo"
+                          },
+                          {
+                            "key": "entityName",
+                            "value": "DRDispatchReceiptDetails"
+                          },
+                          {
+                            "key": "entityColName",
+                            "value": "SerialNo"
+                          },
+                          {
+                            "key": "hidden",
+                            "value": true
+                          },
+                          {
+                            "key": "placeholder",
+                            "value": ""
+                          },
+                          {
+                            "key": "nodehierarchy",
+                            "value": "DRDispatchReceiptRegister.DRDispatchReceiptDetails"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "colIndex": 1,
+                    "rowIndex": 2,
+                    "type": "text",
+                    "subType": "text",
+                    "id": "pipeReceived_ctrlTransportNo",
+                    "label": "TRANSPORT NUMBER",
+                    "events": [],
+                    "attributes": [
+                      {
+                        "key": "defaultvalue",
+                        "value": ""
+                      },
+                      {
+                        "key": "entityName",
+                        "value": "DRDispatchReceiptDetails"
+                      },
+                      {
+                        "key": "entityColName",
+                        "value": "VehicleNo"
+                      },
+                      {
+                        "key": "placeholder",
+                        "value": ""
+                      },
+                      {
+                        "key": "nodehierarchy",
+                        "value": "DRDispatchReceiptRegister.DRDispatchReceiptDetails"
+                      },
+                      {
+                        "key": "maxlength",
+                        "value": "50"
+                      },
+                      {
+                        "key": "RegExp",
+                        "value": "^[a-zA-Z-_\\0-9:,.@#()! ]+$"
+                      },
+                      {
+                        "key": "CopyTo",
+                        "value": [
+                          "IF:(:pmmdispatch_ctrchkusefurther:&&:':pipeReceived_ctrlTransportNo:':!=:undefined:&&:':pipeReceived_ctrlTransportNo:':!=:'':):{:*pipeReceived_ctrlTransportNo:=:':pipeReceived_ctrlTransportNo:':}:ELSE:{:*pipeReceived_ctrlTransportNo:=:'':}",
+                          "*pmmdispatch_ctrchkusefurther:=:pmmdispatch_ctrchkusefurther",
+                          "IF:(:pmmdispatch_ctrchkusefurther:&&:(:':pipeReceived_ctrlTransportNo:'==:'0':||:':pipeReceived_ctrlTransportNo:'==:'':):):{:*pipeReceived_ctrlTransportNo:=:'':}"
+                        ]
+                      },
+                      {
+                        "key": "ComputionalExpression",
+                        "value": [
+                          "IF:(:':pipeReceived_ctrlTransportNo:':==:'0'):{:*pipeReceived_ctrlTransportNo:=:'':}"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "colIndex": 1,
+                    "rowIndex": 3,
+                    "type": "checkbox",
+                    "subType": "checkbox",
+                    "id": "pmmdispatch_ctrchkusefurther",
+                    "label": "Use Transport Number for further inputs",
+                    "events": [],
+                    "attributes": [
+                      {
+                        "key": "defaultvalue",
+                        "value": false
+                      },
+                      {
+                        "key": "alternatetext",
+                        "value": "Use Transport Number for further inputs"
+                      },
+                      {
+                        "key": "placeholder",
+                        "value": ""
+                      },
+                      {
+                        "key": "editmode",
+                        "value": false
+                      }
+                    ]
+                  },
+                  {
+                    "colIndex": 1,
+                    "rowIndex": 4,
+                    "type": "text",
+                    "subType": "textarea",
+                    "id": "pipeReceived_ctrlRemarks",
+                    "label": "Remarks",
+                    "events": [],
+                    "attributes": [
+                      {
+                        "key": "defaultvalue",
+                        "value": ""
+                      },
+                      {
+                        "key": "entityName",
+                        "value": "DispatchReceiptDetail"
+                      },
+                      {
+                        "key": "entityColName",
+                        "value": "Remarks"
+                      },
+                      {
+                        "key": "placeholder",
+                        "value": ""
+                      },
+                      {
+                        "key": "hidden",
+                        "value": false
+                      },
+                      {
+                        "key": "nodehierarchy",
+                        "value": "DRDispatchReceiptRegister.DRDispatchReceiptDetails"
+                      },
+                      {
+                        "key": "maxlength",
+                        "value": "255"
+                      },
+                      {
+                        "key": "RegExp",
+                        "value": "^[a-zA-Z-_\\0-9:,.@#()! ]+$"
+                      }
+                    ]
+                  },
+                  {
+                    "colIndex": 1,
+                    "rowIndex": 5,
+                    "type": "button",
+                    "subType": "fixedButton",
+                    "id": "PMMDISPATCHAudit_ctrlscanNext",
+                    "label": "ADD ANOTHER",
+                    "events": [
+                      {
+                        "key": "onclick",
+                        "value": {
+                          "action": "LoadNativeForm",
+                          "params": {
+                            "FormName": "CAMERA",
+                            "data": {
+                              "dataSource": "items",
+                              "SearchAttributes": ["PipeNo", "HeatNo"],
+                              "NavigatingToForm": "PMMDISPATCH",
+                              "NavigatingToSection": "PMMDISPATCH_PIPEDETAILS",
+                              "DisplayResultAttributes": [
+                                "PipeNo",
+                                "HeatNo",
+                                "Diameter",
+                                "WallThickness",
+                                "Length"
+                              ],
+                              "placeholderKey": "Search Pipe No. / Item No."
+                            }
+                          }
+                        }
+                      }
+                    ],
+                    "attributes": [
+                      {
+                        "key": "classType",
+                        "value": "intraScreen"
+                      },
+                      {
+                        "key": "defaultvalue",
+                        "value": ""
+                      },
+                      {
+                        "key": "placeholder",
+                        "value": ""
+                      },
+                      {
+                        "key": "editmode",
+                        "value": false
+                      },
+                      {
+                        "key": "BusinessValidation",
+                        "value": []
+                      }
+                    ]
+                  },
+                  {
+                    "colIndex": 1,
+                    "rowIndex": 6,
+                    "type": "button",
+                    "subType": "labelButton",
+                    "id": "PMMDISPATCHAudit_ctrlbtnSave",
+                    "label": "Save",
+                    "events": [
+                      {
+                        "key": "onclick",
+                        "value": {
+                          "action": "SaveLoadForm",
+                          "params": {
+                            "FormName": "DispatchItemListing",
+                            "data": null
+                          }
+                        }
+                      }
+                    ],
+                    "attributes": [
+                      {
+                        "key": "classType",
+                        "value": "accept"
+                      },
+                      {
+                        "key": "defaultvalue",
+                        "value": ""
+                      },
+                      {
+                        "key": "placeholder",
+                        "value": ""
+                      },
+                      {
+                        "key": "editmode",
+                        "value": true
+                      },
+                      {
+                        "key": "BusinessValidation",
+                        "value": []
+                      }
+                    ]
+                  },
+                  {
+                    "colIndex": 1,
+                    "rowIndex": 1,
+                    "type": "text",
+                    "subType": "text",
+                    "id": "audit_ctrlactivityid",
+                    "label": "Activity Id",
+                    "events": [],
+                    "attributes": [
+                      {
+                        "key": "defaultvalue",
+                        "value": "##ActivityId"
+                      },
+                      {
+                        "key": "entityName",
+                        "value": "DRDispatchReceiptDetails"
+                      },
+                      {
+                        "key": "entityColName",
+                        "value": "ActivityId"
+                      },
+                      {
+                        "key": "placeholder",
+                        "value": ""
+                      },
+                      {
+                        "key": "nodehierarchy",
+                        "value": "DRDispatchReceiptRegister.DRDispatchReceiptDetails"
+                      },
+                      {
+                        "key": "hidden",
+                        "value": true
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "defaultForm": false,
+          "defaultListing": true,
+          "FormName": "DispatchItemListing",
+          "FormDisplayName": "DISPATCH",
+          "NavigationActionBar": [
+            {
+              "type": "Complete",
+              "action": "LoadForm",
+              "params": {
+                "FormName": "PMMDISPATCHACTIVITYHEADER",
+                "data": null
+              }
+            },
+            {
+              "type": "Conflict",
+              "action": "LoadForm",
+              "params": {
+                "FormName": "Conflicts",
+                "data": null
+              }
+            }
+          ],
+          "Definition": {
+            "Sections": [
+              {
+                "id": "pipe_ctrlDRlistpipeId",
+                "label": "View details of Dispatch Report",
+                "sectionIndex": 1,
+                "expandable": false,
+                "defaultExpanded": false,
+                "columns": 1,
+                "rows": 1,
+                "fields": [
+                  {
+                    "colIndex": 1,
+                    "rowIndex": 1,
+                    "type": "list",
+                    "subType": "grouplist",
+                    "id": "activityheader_ctrlItemlisting",
+                    "label": "Item Listing",
+                    "events": [],
+                    "attributes": [
+                      {
+                        "key": "SearchListing",
+                        "value": {
+                          "dataSource": "ItemListing",
+                          "SearchAttributes": ["PipeCoilId"],
+                          "placeholderKey": "Search Pipe No./Item No."
+                        }
+                      },
+                      {
+                        "key": "entityName",
+                        "value": "ItemListing"
+                      },
+                      {
+                        "key": "Search",
+                        "value": true
+                      },
+                      {
+                        "key": "placeholder",
+                        "value": "Search Pipe No. / Item No."
+                      }
+                    ],
+                    "childfields": [
+                      {
+                        "colIndex": 1,
+                        "rowIndex": 1,
+                        "type": "label",
+                        "subType": "label",
+                        "id": "ItemListing_PipeNo",
+                        "label": "Pipe/Item No",
+                        "events": [],
+                        "attributes": [
+                          {
+                            "key": "dataSource",
+                            "value": "PipeCoilId"
+                          },
+                          {
+                            "key": "hidden",
+                            "value": false
+                          }
+                        ]
+                      },
+                      {
+                        "colIndex": 1,
+                        "rowIndex": 1,
+                        "type": "text",
+                        "subType": "text",
+                        "id": "ItemListing_DispatchDetailId",
+                        "label": "DispatchReceiptDetailId",
+                        "events": [],
+                        "attributes": [
+                          {
+                            "key": "dataSource",
+                            "value": "PrimaryId"
+                          },
+                          {
+                            "key": "hidden",
+                            "value": true
+                          }
+                        ]
+                      },
+                      {
+                        "colIndex": 1,
+                        "rowIndex": 1,
+                        "type": "button",
+                        "subType": "icon",
+                        "id": "ItemListing_btnDispatchReceiptDetailId",
+                        "label": "Edit",
+                        "events": [
+                          {
+                            "key": "onclick",
+                            "value": {
+                              "action": "LoadEditForm",
+                              "params": {
+                                "FormId": 1002,
+                                "FormName": "PMMDISPATCH",
+                                "data": null
+                              }
+                            }
+                          }
+                        ],
+                        "attributes": [
+                          {
+                            "key": "dataSource",
+                            "value": "PrimaryId"
+                          },
+                          {
+                            "key": "icontype",
+                            "value": "edit"
+                          },
+                          {
+                            "key": "hidden",
+                            "value": false
+                          }
+                        ]
+                      },
+                      {
+                        "colIndex": 1,
+                        "rowIndex": 1,
+                        "type": "button",
+                        "subType": "icon",
+                        "id": "ItemListing_btndeleteDispatchReceiptDetailId",
+                        "label": "Delete",
+                        "events": [
+                          {
+                            "key": "onclick",
+                            "value": {
+                              "action": "callback",
+                              "params": {
+                                "actionName": "DELETE",
+                                "data": null
+                              }
+                            }
+                          }
+                        ],
+                        "attributes": [
+                          {
+                            "key": "dataSource",
+                            "value": "PrimaryId"
+                          },
+                          {
+                            "key": "icontype",
+                            "value": "delete"
+                          },
+                          {
+                            "key": "hidden",
+                            "value": false
+                          }
+                        ]
+                      }
+                    ],
+                    "groupfields": [
+                      {
+                        "colIndex": 1,
+                        "rowIndex": 1,
+                        "columns": 2,
+                        "rows": 3,
+                        "type": "group",
+                        "subType": "group",
+                        "id": "pipe_ctrlgrouppipeId",
+                        "label": "PipeNo",
+                        "events": [],
+                        "attributes": [
+                          {
+                            "key": "defaultvalue",
+                            "value": ""
+                          },
+                          {
+                            "key": "classType",
+                            "value": "informationScreen"
+                          },
+                          {
+                            "key": "placeholder",
+                            "value": ""
+                          },
+                          {
+                            "key": "dataSource",
+                            "value": "items"
+                          },
+                          {
+                            "key": "nodehierarchy",
+                            "value": "DRDispatchReceiptRegister.DRDispatchReceiptDetails"
+                          },
+                          {
+                            "key": "entityColName",
+                            "value": "PipeId"
+                          },
+                          {
+                            "key": "valueAttributeName",
+                            "value": "PipeId"
+                          }
+                        ],
+                        "fields": [
+                          {
+                            "colIndex": 1,
+                            "rowIndex": 1,
+                            "type": "text",
+                            "subType": "text",
+                            "id": "pipe_ctrlpipeId",
+                            "label": "PipeId",
+                            "events": [],
+                            "attributes": [
+                              {
+                                "key": "defaultvalue",
+                                "value": ""
+                              },
+                              {
+                                "key": "entityName",
+                                "value": "DRDispatchReceiptDetails"
+                              },
+                              {
+                                "key": "entityColName",
+                                "value": "PipeCoilId"
+                              },
+                              {
+                                "key": "valueAttributeName",
+                                "value": "PipeId"
+                              },
+                              {
+                                "key": "hidden",
+                                "value": true
+                              },
+                              {
+                                "key": "placeholder",
+                                "value": ""
+                              },
+                              {
+                                "key": "nodehierarchy",
+                                "value": "DRDispatchReceiptRegister.DRDispatchReceiptDetails"
+                              }
+                            ]
+                          },
+                          {
+                            "colIndex": 1,
+                            "rowIndex": 1,
+                            "type": "label",
+                            "subType": "label",
+                            "id": "pipe_ctrlPipeNo",
+                            "label": "ITEM NO.",
+                            "events": [],
+                            "attributes": [
+                              {
+                                "key": "defaultvalue",
+                                "value": ""
+                              },
+                              {
+                                "key": "valueAttributeName",
+                                "value": "PipeNo"
+                              },
+                              {
+                                "key": "placeholder",
+                                "value": ""
+                              }
+                            ]
+                          },
+                          {
+                            "colIndex": 2,
+                            "rowIndex": 1,
+                            "type": "label",
+                            "subType": "label",
+                            "id": "pipe_ctrlHeatNo",
+                            "label": "Heat No",
+                            "events": [],
+                            "attributes": [
+                              {
+                                "key": "defaultvalue",
+                                "value": ""
+                              },
+                              {
+                                "key": "valueAttributeName",
+                                "value": "HeatNo"
+                              },
+                              {
+                                "key": "placeholder",
+                                "value": ""
+                              }
+                            ]
+                          },
+                          {
+                            "colIndex": 1,
+                            "rowIndex": 2,
+                            "type": "label",
+                            "subType": "label",
+                            "id": "pipe_ctrlLength",
+                            "label": "Length (M)",
+                            "events": [],
+                            "attributes": [
+                              {
+                                "key": "defaultvalue",
+                                "value": 0
+                              },
+                              {
+                                "key": "valueAttributeName",
+                                "value": "Length"
+                              },
+                              {
+                                "key": "entityName",
+                                "value": "DRPipeClassAudits"
+                              },
+                              {
+                                "key": "entityColName",
+                                "value": "FromLength"
+                              },
+                              {
+                                "key": "placeholder",
+                                "value": ""
+                              },
+                              {
+                                "key": "nodehierarchy",
+                                "value": "DRDispatchReceiptRegister.DRDispatchReceiptDetails.DRPipeClassAudits"
+                              }
+                            ]
+                          },
+                          {
+                            "colIndex": 2,
+                            "rowIndex": 2,
+                            "type": "label",
+                            "subType": "label",
+                            "id": "pipe_ctrldia",
+                            "label": "DIA (IN)",
+                            "events": [],
+                            "attributes": [
+                              {
+                                "key": "defaultvalue",
+                                "value": ""
+                              },
+                              {
+                                "key": "valueAttributeName",
+                                "value": "Diameter"
+                              },
+                              {
+                                "key": "placeholder",
+                                "value": ""
+                              }
+                            ]
+                          },
+                          {
+                            "colIndex": 1,
+                            "rowIndex": 3,
+                            "type": "label",
+                            "subType": "label",
+                            "id": "pipe_ctrlWallThickness",
+                            "label": "WT (IN)",
+                            "events": [],
+                            "attributes": [
+                              {
+                                "key": "defaultvalue",
+                                "value": ""
+                              },
+                              {
+                                "key": "valueAttributeName",
+                                "value": "WallThickness"
+                              },
+                              {
+                                "key": "placeholder",
+                                "value": ""
+                              }
+                            ]
+                          },
+                          {
+                            "colIndex": 2,
+                            "rowIndex": 3,
+                            "type": "label",
+                            "subType": "label",
+                            "id": "pipe_ctrlItemCategory",
+                            "label": "CATEGORY",
+                            "events": [],
+                            "attributes": [
+                              {
+                                "key": "defaultvalue",
+                                "value": ""
+                              },
+                              {
+                                "key": "valueAttributeName",
+                                "value": "ItemCategory"
+                              },
+                              {
+                                "key": "placeholder",
+                                "value": ""
+                              }
+                            ]
+                          },
+                          {
+                            "colIndex": 1,
+                            "rowIndex": 1,
+                            "type": "text",
+                            "subType": "number",
+                            "id": "DRDispatchReceiptDetails_ctrlSerialNo",
+                            "label": "SerialNo",
+                            "events": [],
+                            "attributes": [
+                              {
+                                "key": "defaultvalue",
+                                "value": "##AdSerialNo"
+                              },
+                              {
+                                "key": "entityName",
+                                "value": "DRDispatchReceiptDetails"
+                              },
+                              {
+                                "key": "entityColName",
+                                "value": "SerialNo"
+                              },
+                              {
+                                "key": "hidden",
+                                "value": true
+                              },
+                              {
+                                "key": "placeholder",
+                                "value": ""
+                              },
+                              {
+                                "key": "nodehierarchy",
+                                "value": "DRDispatchReceiptRegister.DRDispatchReceiptDetails"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "defaultForm": false,
+          "defaultListing": false,
+          "FormName": "Conflicts",
+          "FormDisplayName": "Conflicts",
+          "Definition": {
+            "Sections": [
+              {
+                "id": "ConflictsSection",
+                "label": "Conflict Section",
+                "sectionIndex": 1,
+                "expandable": false,
+                "defaultExpanded": false,
+                "columns": 4,
+                "rows": 1,
+                "fields": [
+                  {
+                    "colIndex": 1,
+                    "rowIndex": 1,
+                    "type": "list",
+                    "subType": "list",
+                    "id": "ctrlConflictlist",
+                    "label": "Conflicts",
+                    "events": [],
+                    "attributes": [
+                      {
+                        "key": "SearchListing",
+                        "value": {
+                          "dataSource": "ConflictListing",
+                          "SearchAttributes": ["Message"],
+                          "placeholderKey": "Search Conflicts"
+                        }
+                      },
+                      {
+                        "key": "Search",
+                        "value": false
+                      },
+                      {
+                        "key": "entityName",
+                        "value": "ConflictListing"
+                      }
+                    ],
+                    "fields": [
+                      {
+                        "colIndex": 1,
+                        "rowIndex": 1,
+                        "type": "checkbox",
+                        "subType": "checkbox",
+                        "id": "ConflictListing_MessageType",
+                        "label": "Type",
+                        "events": [],
+                        "attributes": [
+                          {
+                            "key": "dataSource",
+                            "value": "MessageType"
+                          },
+                          {
+                            "key": "hidden",
+                            "value": false
+                          }
+                        ]
+                      },
+                      {
+                        "colIndex": 1,
+                        "rowIndex": 1,
+                        "type": "label",
+                        "subType": "label",
+                        "id": "ConflictListing_Message",
+                        "label": "Message",
+                        "events": [],
+                        "attributes": [
+                          {
+                            "key": "dataSource",
+                            "value": "Message"
+                          },
+                          {
+                            "key": "hidden",
+                            "value": false
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "attributes": []
+              }
+            ]
+          }
+        }
+      ],
+      "FormId": "1002",
+      "GeoBase": "",
+      "RooTableName": "DRDispatchReceiptRegister",
+      "ReportSyncQueues": [
+        {
+          "key": "ReferenceId1",
+          "entityName": "GlobalVariables",
+          "entityColName": "##ProjectId"
+        },
+        {
+          "key": "ReferenceId2",
+          "entityName": "GlobalVariables",
+          "entityColName": "##LineLoopId"
+        },
+        {
+          "key": "ReferenceId3",
+          "entityName": "GlobalVariables",
+          "entityColName": "##CompanyId"
+        },
+        {
+          "key": "ReferenceId4",
+          "entityName": "GlobalVariables",
+          "entityColName": "##SubSystemId"
+        },
+        {
+          "key": "ReferenceId5",
+          "entityName": "GlobalVariables",
+          "entityColName": "##UserId"
+        }
+      ],
+      "ListInputParams": {
+        "DataSource": "items",
+        "ResultKey": "PipeId",
+        "ResultValue": "",
+        "SearchAttributes": ["PipeNo", "HeatNo"],
+        "NavigatingToForm": " PMMDISPATCH",
+        "NavigatingToSection": "PMMDISPATCH_PIPEDETAILS",
+        "DisplayResultAttributes": [
+          "PipeNo",
+          "HeatNo",
+          "Diameter",
+          "WallThickness",
+          "Length"
+        ],
+        "DependencyOn": [],
+        "BusinessValidation": [
+          {
+            "id": "fnDuplicateItems",
+            "functionName": "Duplicate",
+            "entitiyName": "DRDispatchReceiptDetails",
+            "entitycolName": ["PipeCoilId"],
+            "params": {
+              "controlMapping": [
+                {
+                  "key": "PipeCoilId",
+                  "value": "ResultValue"
+                }
+              ]
+            },
+            "additionalParams": [
+              {
+                "key": "ActivityId",
+                "value": "##ActivityId"
+              }
+            ]
+          }
+        ],
+        "placeholderKey": "Search Pipe No. / Item No."
+      },
+      "PreProcessEventMetadata": [
+        {
+          "validate": "checkblankvalues",
+          "action": "LoadNativeForm",
+          "params": {
+            "FormId": "20000000",
+            "FormName": "NATIVEPOPUP",
+            "initialFormName": "",
+            "data": ["##ProjectId"]
+          }
+        }
+      ],
+      "BusinessValidation": [
+        {
+          "id": "fnDuplicateReport",
+          "isExist": false,
+          "errMsg": "Report No. :*activityheader_ctrlreportno: is already exists",
+          "functionName": "Duplicate",
+          "entitiyName": "DRDispatchReceiptRegister",
+          "stopper": true,
+          "entitycolName": ["MRVNumber"],
+          "params": {
+            "controlMapping": [
+              {
+                "key": "MRVNumber",
+                "value": "activityheader_ctrlreportno"
+              }
+            ]
+          },
+          "ignoreParams": [
+            {
+              "key": "DispatchReceiptRegisterId",
+              "value": "DRDispatchReceiptRegister",
+              "valuetype": "ET"
+            }
+          ],
+          "additionalParams": [
+            {
+              "key": "ActivityId",
+              "value": "##ActivityId"
+            }
+          ]
+        },
+        {
+          "id": "fnDuplicateItems",
+          "functionName": "Duplicate",
+          "entitiyName": "DRDispatchReceiptDetails",
+          "isExist": false,
+          "stopper": true,
+          "errMsg": "Pipe No. already dispatched",
+          "entitycolName": ["PipeCoilId"],
+          "params": {
+            "controlMapping": [
+              {
+                "key": "PipeCoilId",
+                "value": "pipe_ctrlgrouppipeId"
+              }
+            ]
+          },
+          "additionalParams": [
+            {
+              "key": "ActivityId",
+              "value": "##ActivityId"
+            }
+          ]
+        }
+      ],
+      "DependencyObject": []
+    }
+  ]
+}
